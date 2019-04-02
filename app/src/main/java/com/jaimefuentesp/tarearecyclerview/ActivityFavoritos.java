@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import java.util.ArrayList;
@@ -18,8 +19,11 @@ public class ActivityFavoritos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
-        //this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
+        setSupportActionBar(miActionBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         listaMascotasFavorito = (RecyclerView) findViewById(R.id.cvFavoritosMascota);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -31,7 +35,7 @@ public class ActivityFavoritos extends AppCompatActivity {
     }
 
     public void inicializarAdaptador () {
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotasFavorito,this);
+            MascotaAdaptador adaptador = new MascotaAdaptador(mascotasFavorito,this);
         listaMascotasFavorito.setAdapter(adaptador);
     }
 
