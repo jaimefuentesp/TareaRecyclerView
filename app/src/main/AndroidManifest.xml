@@ -9,13 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityFavoritos"
+        <activity android:name=".ActivityAbout"
             android:parentActivityName=".MainActivity">
-            <!--Soporte para version 4.0 o menores-->
+            <!-- Soporte para version 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ActivityContacto"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Soporte para version 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ActivityFavoritos"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Soporte para version 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

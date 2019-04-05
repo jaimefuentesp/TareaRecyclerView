@@ -3,4 +3,13 @@
     <string name="nombre">nombre</string>
     <string name="puntaje">5</string>
     <string name="favorito">favorito</string>
+    <string name="contacto">Contacto</string>
+    <string name="acercade">Acerca de</string>
+    <string name="nombreCompleto">Nombre Completo</string>
+    <string name="mail">Email</string>
+    <string name="mensajaeMail">Ingrese mensaje</string>
+    <string name="botonEnviar">Enviar comentario</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

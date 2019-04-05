@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="100dp"
+    android:id="@+id/cvFotoMascota"
+    android:layout_margin="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/cvFotoFoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gato2"
+            android:cropToPadding="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/cvFotoPuntaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textSize="20dp"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:id="@+id/cvFotoFavorito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/huesodorado"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

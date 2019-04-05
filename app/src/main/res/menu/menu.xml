@@ -8,8 +8,13 @@
         app:showAsAction="always"
         />
     <item
-        android:title="prueba"
-        android:id="@+id/itemPrueba"
+        android:title="@string/contacto"
+        android:id="@+id/itemContacto"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="@string/acercade"
+        android:id="@+id/itemAcercaDe"
         app:showAsAction="never"
         />
 </menu>

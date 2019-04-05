@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ActivityAbout"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical">
+        <include android:id="@+id/miActionBar"
+            layout="@layout/actionbar">
+        </include>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/foto2"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soy Jaime Fuentes. Profesional de ingeniería de sistemas. Jefe de proyectos especializado en sistemas comerciales CRM y Customer Experience. Con amplia experiencia en consultoría y brindando servicios a entidades bancarias líderes en Perú. Experto en plataformas de Oracle, Microsoft y SAP en consultoras top a nivel mundial. Orientado al trabajo por objetivos. Con capacidad de liderazgo, actitud para motivar, movilizar y administrar equipos de trabajo. "
+            android:textSize="15dp"
+            android:layout_marginTop="40dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+</ScrollView>
