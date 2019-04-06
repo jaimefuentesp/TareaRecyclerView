@@ -47,7 +47,7 @@
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
     <Button
-        android:id="@+id/botonSiguiente"
+        android:id="@+id/botonEnviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
