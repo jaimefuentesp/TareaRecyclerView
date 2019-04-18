@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.jaimefuentesp.tarearecyclerview.R;
 import com.jaimefuentesp.tarearecyclerview.adapter.MascotaAdaptador;
 import com.jaimefuentesp.tarearecyclerview.pojo.Mascota;
+import com.jaimefuentesp.tarearecyclerview.presentador.FragmentoInicioPresenter;
+import com.jaimefuentesp.tarearecyclerview.presentador.IFragmentoInicioPresenter;
 
 import java.util.ArrayList;
 
@@ -22,10 +24,11 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentoInicio extends Fragment {
+public class FragmentoInicio extends Fragment implements IFragmentoInicioView {
 
     ArrayList<Mascota> mascotas;
     private RecyclerView listaMascotas;
+    private IFragmentoInicioPresenter presenter;
 
     public FragmentoInicio() {
         // Required empty public constructor
@@ -48,18 +51,8 @@ public class FragmentoInicio extends Fragment {
         });
 
         listaMascotas = (RecyclerView) v.findViewById(R.id.cvDetalleMascota);
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-
-        listaMascotas.setLayoutManager(llm);
-        inicializarListaMascotas();
-        inicializarAdaptador();
+        presenter =new FragmentoInicioPresenter(this,getContext());
         return v;
-    }
-
-    public void inicializarAdaptador () {
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,getActivity());
-        listaMascotas.setAdapter(adaptador);
     }
 
     public void inicializarListaMascotas () {
@@ -73,5 +66,24 @@ public class FragmentoInicio extends Fragment {
         mascotas.add(new Mascota(R.drawable.gato1,"Michi",10,false));
         mascotas.add(new Mascota(R.drawable.gato2,"Miau",10,false));
         mascotas.add(new Mascota(R.drawable.gato3,"Rata",10,true));
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        //GridLayoutManager glm = new GridLayoutManager(this,2);
+        listaMascotas.setLayoutManager(llm);
+    }
+
+    @Override
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas) {
+        MascotaAdaptador adaptador=new MascotaAdaptador(mascotas,getActivity());
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(MascotaAdaptador adaptador) {
+        listaMascotas.setAdapter(adaptador);
     }
 }

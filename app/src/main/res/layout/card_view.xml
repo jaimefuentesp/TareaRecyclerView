@@ -59,7 +59,8 @@
                 android:layout_gravity="fill"
                 android:scaleType="centerCrop"
                 android:layout_marginLeft="0dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                />
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

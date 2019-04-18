@@ -1,6 +1,10 @@
 package com.jaimefuentesp.tarearecyclerview.pojo;
 
 public class Mascota {
+    public Mascota() {
+
+    }
+
     public int getFoto() {
         return foto;
     }
@@ -37,6 +41,7 @@ public class Mascota {
     private String nombre;
     private int Puntaje;
     private boolean favorito;
+    private int id;
 
     public Mascota(int foto, String nombre, int puntaje, boolean favorito) {
         this.foto = foto;
@@ -46,4 +51,11 @@ public class Mascota {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
